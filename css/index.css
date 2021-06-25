@@ -1,0 +1,94 @@
+section.accordion-box {
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle, #01054f 0%, #000060 48%, #3e02a6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  -webkit-animation: fondo 5s infinite alternate;
+          animation: fondo 5s infinite alternate;
+}
+section.accordion-box ul {
+  width: 300px;
+  -webkit-animation: latido 1s infinite alternate;
+          animation: latido 1s infinite alternate;
+}
+section.accordion-box ul li {
+  list-style: none;
+  height: 70px;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 2px solid #6900a1;
+  cursor: pointer;
+}
+section.accordion-box ul li h2 {
+  padding: 20px;
+}
+section.accordion-box ul li h2 a {
+  text-decoration: none;
+  color: #FFF;
+  text-align: left;
+}
+section.accordion-box ul li h2 i {
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+  color: #FFF;
+}
+section.accordion-box ul li p {
+  padding: 5px;
+  color: #FFF;
+  text-align: center;
+}
+section.accordion-box ul:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes fondo {
+  0% {
+    background-size: 150% 120%;
+  }
+  50% {
+    background-size: 200% 320%;
+  }
+  100% {
+    background-size: 300% 420%;
+  }
+}
+
+@keyframes fondo {
+  0% {
+    background-size: 150% 120%;
+  }
+  50% {
+    background-size: 200% 320%;
+  }
+  100% {
+    background-size: 300% 420%;
+  }
+}
+@-webkit-keyframes latido {
+  0% {
+    box-shadow: 0 0 5px 5px #920cd9;
+  }
+  100% {
+    box-shadow: 0 0 25px 5px #920cd9;
+  }
+}
+@keyframes latido {
+  0% {
+    box-shadow: 0 0 5px 5px #920cd9;
+  }
+  100% {
+    box-shadow: 0 0 25px 5px #920cd9;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  transition: all 0.4s;
+}/*# sourceMappingURL=index.css.map */

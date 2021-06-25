@@ -1,0 +1,68 @@
+@use 'color';
+section {
+    &.accordion-box {
+        height: 100vh;
+        width: 100%;
+        background: color.$color-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        animation: fondo 5s infinite alternate;
+        ul {
+            width: 300px;
+            animation: latido 1s infinite alternate;
+            li {
+                list-style: none;
+                height: 70px;
+                overflow: hidden;
+                position: relative;
+                border-bottom: 2px solid color.$color-border;
+                cursor: pointer;
+                h2 {
+                    padding: 20px;
+                    a {
+                        text-decoration: none;
+                        color: color.$color-letter;
+                        text-align: left;
+                    }
+                    i {
+                        position: absolute;
+                        right: 15px;
+                        font-size: 20px;
+                        color: color.$color-letter;
+                    }
+                }
+                p {
+                    padding: 5px;
+                    color: color.$color-letter;
+                    text-align: center;
+                }
+            }
+        }
+        ul:hover {
+            animation-play-state: paused;
+        }
+    }
+}
+
+@keyframes fondo {
+    0% {
+        background-size: 150% 120%;
+    }
+    50% {
+        background-size: 200% 320%;
+    }
+    100% {
+        background-size: 300% 420%;
+    }
+}
+
+@keyframes latido {
+    0% {
+        box-shadow: 0 0 5px 5px #920cd9;
+    }
+    100% {
+        box-shadow: 0 0 25px 5px #920cd9;
+    }
+}
